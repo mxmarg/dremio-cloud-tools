@@ -170,6 +170,9 @@ executor:
   # Executor volume size.
   volumeSize: 128Gi
 
+  # Set the following value to the mount path
+  localDiskPathData: /mnt
+
   # Kubernetes Service Account
   # Uncomment below to use a custom Kubernetes service account for executors.
   #serviceAccount: ""
@@ -213,6 +216,12 @@ executor:
   # persistent volume storage that resides far from the physical node.
   cloudCache:
     enabled: true
+
+  # Set the following value to the mount path
+    localDiskPathC3: /mnt
+
+    # This value must define the percentage of physical disk space that a single executor is allowed to use for caching
+    pctquota: 10
 
     # Uncomment this value to use a different storage class for C3.
     #storageClass:
