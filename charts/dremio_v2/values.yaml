@@ -209,7 +209,7 @@ executor:
   # Whether to write executor logs to a file on disk. Disabled by default.
   # When enabled, log messages are logged to the console and written to a persistent volume mounted at /opt/dremio/log.
   # When disabled, log messages are logged to the console only.
-  #writeLogsToFile: true
+  writeLogsToFile: false
 
   # Dremio C3
   # Designed for use with NVMe storage devices, performance may be impacted when using
@@ -219,9 +219,6 @@ executor:
 
   # Set the following value to the mount path
     localDiskPathC3: /mnt
-
-    # This value must define the percentage of physical disk space that a single executor is allowed to use for caching
-    pctquota: 10
 
     # Uncomment this value to use a different storage class for C3.
     #storageClass:
