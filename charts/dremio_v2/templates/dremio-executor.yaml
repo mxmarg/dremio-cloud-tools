@@ -126,10 +126,6 @@ spec:
       - name: dremio-hive3-config
         configMap:
           name: dremio-hive3-config
-      - name: {{ template "dremio.executor.volumeClaimName" (list $ $engineName) }}
-        hostPath:
-          path: {{ $.Values.executor.localDiskPathData }}/data
-          type: DirectoryOrCreate
       - name: executor-data
         hostPath:
           path: {{ $.Values.executor.localDiskPathData }}/data
